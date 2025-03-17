@@ -75,7 +75,7 @@ export function getClusterAuthType(cluster: string): string {
 export async function request(
   path: string,
   params: RequestParams = {},
-  autoLogoutOnAuthError: boolean = true,
+  autoLogoutOnAuthError: boolean = false,
   useCluster: boolean = true,
   queryParams?: QueryParameters
 ): Promise<any> {
