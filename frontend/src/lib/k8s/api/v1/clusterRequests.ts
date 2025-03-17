@@ -138,7 +138,7 @@ export async function clusterRequest(
       await refreshToken(token);
     }
 
-    if (!!token) {
+    if (!!token && !path.includes("healthz")) {
       opts.headers.Authorization = `Bearer ${token}`;
     }
 
